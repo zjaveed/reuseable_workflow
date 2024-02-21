@@ -35,8 +35,8 @@ jobs:
        with:
          secrets: ${{ toJSON(secrets) }}
      - run: |
-         echo "Value of MY_SECRET1:" $pass_secret_1
-         echo "Value of MY_SECRET1:" $pass_secret_2
+         echo "Value of MY_SECRET1: $pass_secret_1 "
+         echo "Value of MY_SECRET2: $pass_secret_2 "
     
 
     
