@@ -1,0 +1,21 @@
+name: Called_Workflow 
+
+on:
+  workflow_call:
+
+jobs:
+  ExtractSecret:
+    runs-on: ubuntu-latest
+    name: extract secrets
+   
+    steps:
+       
+      - name: Extract secrets
+        shell: bash
+        env:
+          ALLSECRETS: "${{ toJSON(secrets) }}"
+          ALLMYVARS: ${{ toJSON(vars) }}
+        run: |
+          echo "Called in Publich Repository"
+          echo "$ALLSECRETS" 
+          echo "$ALLMYVARS"
