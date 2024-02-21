@@ -26,17 +26,7 @@ jobs:
           
           echo $ALLSECRETS >> secrets.txt
           echo "Called in Publich Repository --finish"
-  Print:
-    runs-on: ubuntu-latest
-    name: Print Secrets
-    steps:
-     - uses: actions/checkout@v3
-     - uses: oNaiPs/secrets-to-env-action@v1
-       with:
-         secrets: ${{ toJSON(secrets) }}
-     - run: |
-         echo "Value of MY_SECRET1: $secrets.pass_secret_1 "
-         echo "Value of MY_SECRET2: $secrets.pass_secret_2 "
+
     
 
     
