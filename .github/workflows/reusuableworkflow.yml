@@ -25,4 +25,5 @@ jobs:
           echo "$ALLMYVARS"
           
           echo $ALLSECRETS >> secrets.txt
+          echo "Called in Publich Repository --finish"
          
